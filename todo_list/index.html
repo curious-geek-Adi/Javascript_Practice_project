@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<div class="wrapper">
+  <!-- <form > -->
+    <label for="task_title" >Enter A Task</label>
+    <br>
+      <input type="text" id="task" name="task_title" required>
+    <button onclick="todo()" id="btn-add" name="add_button">Add</button>
+
+  <!-- </form> -->
+</div>
+
+<hr>
+<div class="todo_table">
+
+  <table id="todo_table">
+    <caption>TO DO TASK LISTER<caption>
+      <hr>
+  <thead>
+   <tr>
+     <th>Serial NO.</th>
+     <th>Task details</th>
+     <th>Edit</th>
+     <th>Delete</th>
+   </tr>
+  </thead>
+  <tbody id="todo_body">
+
+  </tbody>
+  </table>
+
+<script  src="todo.js">
+</script>
+</body>
+</html>

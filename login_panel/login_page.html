@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    .container {
+      margin:50px 50px 50px 50px;
+    }
+
+
+    button{
+      background-color: #bed3ce;
+      color: black;
+      height: 9vh;
+      width: 10vw;
+      border-radius: 5vh;
+      display: block;
+      margin:0 auto;
+    }
+    table {
+      width:100%;
+    }
+
+    th:nth-child(n+1)
+    {
+      background-color: yellow;
+    }
+    th:first-child{
+      background-color: orange;
+    }
+    th:last-child {
+      background-color: tomato;
+    }
+
+    td{
+      text-align: center;
+      font-size: 17px;
+      color: green;
+      padding-inline: 8px;
+    }
+    tr:nth-child(even) {
+        background-color: #d6e1af;
+
+    }
+    tr:nth-child(odd)
+    {
+      background-color: #9dd1ed;
+    }
+
+    td:first-child {
+      font-size: 30px;
+    }
+    input[type="text"]
+    {
+      width: 32vw;
+height: 4vh;
+    }
+
+    input[type="password"]
+    {
+      width: 32vw;
+height: 4vh;
+    }
+  </style>
+</head>
+<body>
+
+       <h1>Login Page</h1>
+        <form action="welcome.html" onsubmit="return pass_validate()">
+
+          <table>
+            <tbody>
+              <tr>
+                <td>  <label for="fname">User Name</label></td>
+                <td> <input type="text" id="uname" placeholder="Enter user name" onfocusout="ftest()" required></td>
+              </tr>
+              <tr>
+
+                <td><label for="lname">password</label></td>
+                <td><input type="password" id="pass" placeholder="Enter password" onfocusout="ltest()" required>  </td>
+              </tr>
+            </tbody>
+          </table>
+          <button >Submit</button>
+          </form>
+
+  <script type="text/javascript" src="login.js">
+
+  </script>
+</body>
+</html>

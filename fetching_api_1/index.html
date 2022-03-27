@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    h2{
+      background: orange;
+      color:blcak;
+
+    }
+    h4{
+      background: yellow;
+      colorL:black;
+    }
+    button{
+      background-color: #bed3ce;
+      color: black;
+      height: 13vh;
+      width: 10vw;
+      border-radius: 5vh;
+      display: block;
+      margin:0 auto;
+    }
+  </style>
+</head>
+<body>
+<button  id="add_btn" onclick="fetching()" > Addlist </button>
+<div id="wrapper" class="container">
+
+</div>
+<script>
+  const URL="https://jsonplaceholder.typicode.com/posts";
+  function fetching()
+  {
+    var data_list;
+    fetch(URL)
+    .then(res => res.json() )
+    .then(data =>{
+      let html="";
+      data.forEach(user => {
+      let htmlSegment = `<div class="user">
+                          <h2 > title: ${user.title}</h2>
+                          <h4 > body ${user.body}</h4>
+                          <hr>
+                      </div>`;
+
+      html += htmlSegment;
+  });
+  let container = document.querySelector('.container');
+  container.innerHTML = html;
+    })
+    .catch(err => {
+      console.log(err);
+    })
+
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    .container {
+      margin:50px 50px 50px 50px;
+    }
+    input[type="text"]
+    {
+      width: 32vw;
+height: 4vh;
+    }
+
+    input[type="password"]
+    {
+      width: 32vw;
+height: 4vh;
+    }
+
+    button{
+      background-color: #bed3ce;
+      color: black;
+      height: 9vh;
+      width: 10vw;
+      border-radius: 5vh;
+      display: block;
+      margin:0 auto;
+    }
+    table {
+      width:100%;
+    }
+
+    th:nth-child(n+1)
+    {
+      background-color: yellow;
+    }
+    th:first-child{
+      background-color: orange;
+    }
+    th:last-child {
+      background-color: tomato;
+    }
+
+    td{
+      text-align: center;
+      font-size: 17px;
+      color: green;
+      padding-inline: 8px;
+    }
+    tr:nth-child(even) {
+        background-color: #d6e1af;
+
+    }
+    tr:nth-child(odd)
+    {
+      background-color: #9dd1ed;
+    }
+
+    td:first-child {
+      font-size: 30px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Validation Form</h1>
+    <form>
+      <table>
+        <tbody>
+          <tr>
+            <td><label for="fname">First Name</label></td>
+            <td>  <input type="text" id="fname" placeholder="Enter first name" onsubmit="ftest()" required></td>
+          </tr>
+          <tr>
+            <td>  <label for="lname">Last Name</label></td>
+            <td> <input type="text" id="lname" placeholder="Enter last name" onsubmit="ltest()" required></td>
+          </tr>
+          <tr>
+            <td><label for="phno">Phone NUmber</label></td>
+            <td><input type="text" id="phno" placeholder="Enter phonenumber" onsubmit="ptest()" required></td>
+          </tr>
+          <tr>
+            <td><label for="age">Age</label></td>
+            <td><input type="text" id="age" placeholder="Enter age" onsubmit="atest()" required></td>
+          </tr>
+          <tr>
+            <td>  <label for="income">income</label></td>
+            <td><input type="text" id="income" placeholder="Enter income" onsubmit="itest()" required></td>
+          </tr>
+
+        </tbody>
+
+      </table>
+          <button onclick="final()">Submit</button>
+      </form>
+  </div>
+<script type="text/javascript">
+  var nameRegex=/^[a-zA-Z]{2,50}$/;
+  var phoneRegex=/^[0-9]{10}$/;
+  var ageRegex=/^100|[1-9]?\d$/;
+
+  function ftest()
+  {
+  let target=document.getElementById("fname").value;
+  if(nameRegex.test(target))
+  {
+     return true;
+  }
+  else{
+    alert("First-Name You have to use only a-z charachter");
+    document.getElementById("fname").value='';
+    return false;
+  }
+  }
+
+  function ltest()
+  {
+  let target=document.getElementById("lname").value;
+  if(nameRegex.test(target))
+  {
+    return true;
+  }
+  else{
+    alert("Last-Name You have to use only a-z charachter");
+    document.getElementById("lname").value='';
+    return false;
+  }
+  }
+
+  function ptest()
+  {
+  let target=document.getElementById("phno").value;
+  if(phoneRegex.test(target))
+  {
+     return true;
+  }
+  else{
+    alert("phone number You have to use only 0-9 digits ");
+    document.getElementById("phno").value='';
+    return false;
+  }
+  }
+
+  function atest()
+  {
+  let target=document.getElementById("age").value;
+  if(18 < Number(target))
+  {
+     return true;
+  }
+  else{
+    alert("age You have to use only 0-9 digits above 18 years ");
+    document.getElementById("age").value='';
+    return false;
+  }
+  }
+
+  function itest()
+  {
+  let target=document.getElementById("income").value;
+  if(20000 < Number(target))
+  {
+     return true;
+  }
+  else{
+    alert("income more than 20,000 ");
+    document.getElementById("income").value='';
+    return false;
+  }
+  }
+
+  function final()
+  {
+    if(ftest() && ltest() && ptest() &&itest() && atest())
+    {
+      alert("form is submitted sucessfully");
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+button {
+    background: #e4e4edfa;
+    padding: 2vh 3vw;
+    border-radius: 2vw;
+    border: none;
+    color: blue;
+    font-size: 18px;
+   margin-bottom: : 16px;
+    margin-top: 16px;
+}
+div{
+  margin-left:31%;
+}
+label{
+  font-size: 29px;
+      text-align: center;
+      margin: 0 0 0 30px;
+      color: #9753ad;
+}
+
+input[type="text"] {
+  width: 30vw;
+  height: 10vh;
+  border: 2px solid grey;
+  font-size: 24px;
+  border-radius: 28px;
+  padding-left: 20px;
+}
+.form {
+  background-color: secondary;
+}
+
+caption{
+  font-size: 20px;
+  color:green;
+  text-align: center;
+}
+.todo_table {
+  margin:5vh;
+
+}
+table {
+  width:100%;
+}
+
+th:nth-child(n+1)
+{
+  background-color: yellow;
+}
+th:first-child{
+  background-color: orange;
+}
+th:last-child {
+  background-color: tomato;
+}
+
+td{
+  text-align: center;
+  font-size: 17px;
+  color: green;
+  padding-inline: 8px;
+}
+tr:nth-child(even) {
+    background-color: #d6e1af;
+
+}
+tr:nth-child(odd)
+{
+  background-color: #9dd1ed;
+}
+
+td:first-child {
+  font-size: 30px;
+}
